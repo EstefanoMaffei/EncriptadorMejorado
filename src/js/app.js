@@ -1,8 +1,10 @@
-
+     //! TEXTO QUE RECIBE DEL USUARIO
 let textoUsuario = document.querySelector('#textoUsuario'),
-    textoEncriptado = document.querySelector('#textoEncriptado'),
-    btnEncriptar = document.querySelector('#btn-Encriptar'),
-    btnDesencriptar =document.querySelector('#btn-Desencriptar');
+     //! TEXTO A IMPRIMIR DESPUES DE ENCRIPTAR
+     textoEncriptado = document.querySelector('#textoEncriptado'),
+    //! BTN DE ACTIVACION PARA LAS ACCIONES
+     btnEncriptar = document.querySelector('#btn-Encriptar'),
+     btnDesencriptar =document.querySelector('#btn-Desencriptar');
 
 const encriptado = {
      a : 'ai',
@@ -14,25 +16,22 @@ const encriptado = {
 
 let textocompleto = '';
 
-
+//! ACTIVAR ENCRIPTADO
 btnEncriptar.addEventListener('click', () => {
-
      let encriptar = Array.from(textoUsuario.value);
-
      encriptarTexto(encriptar);
      textocompleto = encriptar.join("");
-     console.log(textocompleto);
      textoEncriptadoPantalla(textocompleto);
      return textocompleto; 
      
 });
 
-
-btnDesencriptar.addEventListener('click', (e) => {
-     let Desencriptar = textocompleto;
-     desencriptarTexto(Desencriptar);
+//! ACTIVAR DESENCRIPTADO
+btnDesencriptar.addEventListener('click', () => {
+     let desencriptar = textoUsuario.value
+     desencriptarTexto(desencriptar);
      textoEncriptadoPantalla(textocompleto);
-
+     return textocompleto;
 })
 
 const encriptarTexto = (texto) => {
@@ -53,25 +52,26 @@ const encriptarTexto = (texto) => {
      return texto;
 }
 
-const desencriptarTexto = (textocompleto)=>{
-     for(let i = 0; i <= textocompleto.length; i++){
-          if(textocompleto.includes('ai') == true){
-               textocompleto = textocompleto.replace('ai','a');
-          }else if(textocompleto.includes('enter') == true){
-               textocompleto = textocompleto.replace('enter','e');
-          }else if(textocompleto.includes('imes') == true){
-               textocompleto = textocompleto.replace('imes','i');
-          }else if(textocompleto.includes('ober') == true){
-               textocompleto = textocompleto.replace('ober','o');
-          }else if(textocompleto.includes('ufat') ==true){
-               textocompleto = textocompleto.replace('ufat','u');
+//! LOGICA DESENCRIPTADO.
+const desencriptarTexto = (desencriptar)=>{
+          if(desencriptar.includes('ai') == true){
+               desencriptar = desencriptar.replace('ai','a');
+          }else if( desencriptar.includes('enter') == true){
+               desencriptar = desencriptar.replace('enter','e');
+          }else if( desencriptar.includes('imes') == true){
+               desencriptar = desencriptar.replace('imes','i');
+          }else if( desencriptar.includes('ober') == true){
+               desencriptar = desencriptar.replace('ober','o');
+          }else if( desencriptar.includes('ufat') == true){
+               desencriptar = desencriptar.replace('ufat','u');
           }
-     }
-     return textocompleto;
+     return textocompleto = desencriptar;
 }
 
-const textoEncriptadoPantalla = (textocompleto)=>{
-     textoEncriptado.value = textocompleto;
-     textocompleto = '';
+//! IMPRIMIR RESULTADO EN PANTALLA
+const textoEncriptadoPantalla = (e)=>{
+     return textoEncriptado.value = e;
 }
+
+
 

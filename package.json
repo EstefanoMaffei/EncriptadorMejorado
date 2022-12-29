@@ -1,0 +1,22 @@
+{
+  "name": "encriptador",
+  "version": "1.0.0",
+  "description": "encriptador proyecto",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch src/scss:build/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EstefanoMaffei/EncriptadorMejorado.git"
+  },
+  "author": "estefano maffei",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EstefanoMaffei/EncriptadorMejorado/issues"
+  },
+  "homepage": "https://github.com/EstefanoMaffei/EncriptadorMejorado#readme",
+  "devDependencies": {
+    "sass": "^1.57.1"
+  }
+}
