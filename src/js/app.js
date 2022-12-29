@@ -4,7 +4,9 @@ let textoUsuario = document.querySelector('#textoUsuario'),
      textoEncriptado = document.querySelector('#textoEncriptado'),
     //! BTN DE ACTIVACION PARA LAS ACCIONES
      btnEncriptar = document.querySelector('#btn-Encriptar'),
-     btnDesencriptar =document.querySelector('#btn-Desencriptar');
+     btnDesencriptar =document.querySelector('#btn-Desencriptar'),
+     btnIdiomaingles  = document.querySelector('#english'),
+     btnIdiomaespañol = document.querySelector('#español'); 
 
 const encriptado = {
      a : 'ai',
@@ -73,5 +75,13 @@ const textoEncriptadoPantalla = (e)=>{
      return textoEncriptado.value = e;
 }
 
+btnIdiomaespañol.addEventListener('click',()=>{
+     let html = document.querySelector('html');
+     return html.setAttribute('lang','es');
+});
+btnIdiomaingles.addEventListener('click',()=>{
+     let html = document.querySelector('html');
+     html.setAttribute('lang','en');
+});
 
 
