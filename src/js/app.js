@@ -13,20 +13,16 @@ const encriptado = {
 }
 
 let textocompleto = '';
-     
-textoUsuario.addEventListener('keyup', () => {
-         
-});
 
 
 btnEncriptar.addEventListener('click', () => {
 
      let encriptar = Array.from(textoUsuario.value);
-          
 
      encriptarTexto(encriptar);
      textocompleto = encriptar.join("");
-     console.log(textocompleto); 
+     console.log(textocompleto);
+     textoEncriptadoPantalla(textocompleto);
      return textocompleto; 
      
 });
@@ -35,6 +31,8 @@ btnEncriptar.addEventListener('click', () => {
 btnDesencriptar.addEventListener('click', (e) => {
      let Desencriptar = textocompleto;
      desencriptarTexto(Desencriptar);
+     textoEncriptadoPantalla(textocompleto);
+
 })
 
 const encriptarTexto = (texto) => {
@@ -69,9 +67,11 @@ const desencriptarTexto = (textocompleto)=>{
                textocompleto = textocompleto.replace('ufat','u');
           }
      }
-
      return textocompleto;
 }
 
-
+const textoEncriptadoPantalla = (textocompleto)=>{
+     textoEncriptado.value = textocompleto;
+     textocompleto = '';
+}
 
