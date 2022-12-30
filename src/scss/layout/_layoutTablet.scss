@@ -1,0 +1,57 @@
+@use '../base/mixins' as m;
+@use '../base/variables' as v;
+
+@include m.tablet{
+     .headerPagina{     
+          width: 100%;
+          height: 30rem;
+          align-items: center;
+          flex-direction: column;
+          a{
+               width: 30%;
+          }
+     }
+     
+     .idioma{
+          align-items: center;
+          flex-direction: column;
+          a{
+               cursor: pointer;
+          }
+     }
+     
+     footer{
+          text-align: center;
+          margin-top: 1rem;
+     }
+
+
+     .text-ingresarUsuario{
+          display: block;
+          
+     }
+     
+     .text-ingresarUsuario h2,h3{
+
+          text-align: center;
+     }
+     
+     
+     textarea{
+          font-size: 2.5rem;
+          border-bottom: 1px solid v.$gris;
+     }
+     
+     
+     
+     .btnGeneral{
+          display: block;
+     
+     }
+
+     img{
+          width: 50%;
+          margin: auto
+     }
+     .darkmode{width: 10%; cursor: pointer;}
+}

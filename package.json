@@ -4,7 +4,8 @@
   "description": "encriptador proyecto",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch src/scss:build/css"
+    "sass": "sass --watch src/scss:build/css",
+    "dev": "javascript --watch src/js:build/js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,13 @@
   },
   "homepage": "https://github.com/EstefanoMaffei/EncriptadorMejorado#readme",
   "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "cssnano": "^5.1.14",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0",
+    "plumber": "^0.4.8",
+    "postcss": "^8.4.20",
     "sass": "^1.57.1"
   }
 }

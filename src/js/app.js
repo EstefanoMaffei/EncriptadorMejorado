@@ -7,8 +7,8 @@ const textoUsuario = document.getElementById('textoUsuario'),
      btnCopiar    = document.getElementById('btnCopiar'),
      btnDesencriptar =document.getElementById('btn-Desencriptar'),
      btnIdiomaingles  = document.getElementById('english'),
-     btnIdiomaespañol = document.getElementById('español'), 
-     darkMode = document.querySelector('.darkMode');
+     btnIdiomaespañol = document.getElementById('español'),
+     darkMode = document.querySelector('#darkMode');
 
 const encriptado = {
      a : 'ai',
@@ -40,15 +40,15 @@ btnDesencriptar.addEventListener('click', () => {
 
 const encriptarTexto = (texto) => {
      for(let i=0; i<= texto.length; i++){
-          if(texto[i] == 'a'){
+          if(texto[i] == 'a' || texto[i] == 'A'){
                texto[i] = encriptado.a;
-          }else if(texto[i] == 'e'){
+          }else if(texto[i] == 'e' || texto[i] == 'E'){
                texto[i] = encriptado.e;
-          }else if(texto[i] == 'i'){
+          }else if(texto[i] == 'i' || texto[i] == 'I'){
                texto[i] = encriptado.i;
-          }else if(texto[i] == 'o'){
+          }else if(texto[i] == 'o' || texto[i] == 'O'){
                texto[i] = encriptado.o;
-          }else if(texto[i] == 'u'){
+          }else if(texto[i] == 'u' || texto[i] == 'U'){
                texto[i] = encriptado.u;
           }
      }
@@ -58,7 +58,7 @@ const encriptarTexto = (texto) => {
 
 //! LOGICA DESENCRIPTADO.
 const desencriptarTexto = (desencriptar)=>{
-          if(desencriptar.includes('ai') == true){
+          if(desencriptar.includes('ai') == true) {
                desencriptar = desencriptar.replace('ai','a');
           }else if( desencriptar.includes('enter') == true){
                desencriptar = desencriptar.replace('enter','e');

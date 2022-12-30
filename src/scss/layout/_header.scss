@@ -1,7 +1,6 @@
 @use '../base/variables' as v;
 
 .headerPagina{     
-     margin: 1rem;
      display: flex;
      align-items: center;
      justify-content: space-around;
@@ -25,7 +24,7 @@
      }
 }
 
-.darkMode{
-     width: 5%;
-     cursor: pointer;
+footer{
+     text-align: center;
+     margin-top: 1rem;
 }
