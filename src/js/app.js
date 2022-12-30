@@ -1,12 +1,14 @@
      //! TEXTO QUE RECIBE DEL USUARIO
-let textoUsuario = document.querySelector('#textoUsuario'),
+const textoUsuario = document.getElementById('textoUsuario'),
      //! TEXTO A IMPRIMIR DESPUES DE ENCRIPTAR
-     textoEncriptado = document.querySelector('#textoEncriptado'),
+     textoEncriptado = document.getElementById('textoEncriptado'),
     //! BTN DE ACTIVACION PARA LAS ACCIONES
-     btnEncriptar = document.querySelector('#btn-Encriptar'),
-     btnDesencriptar =document.querySelector('#btn-Desencriptar'),
-     btnIdiomaingles  = document.querySelector('#english'),
-     btnIdiomaespañol = document.querySelector('#español'); 
+     btnEncriptar = document.getElementById('btn-Encriptar'),
+     btnCopiar    = document.getElementById('btnCopiar'),
+     btnDesencriptar =document.getElementById('btn-Desencriptar'),
+     btnIdiomaingles  = document.getElementById('english'),
+     btnIdiomaespañol = document.getElementById('español'), 
+     darkMode = document.querySelector('.darkMode');
 
 const encriptado = {
      a : 'ai',
@@ -72,6 +74,7 @@ const desencriptarTexto = (desencriptar)=>{
 
 //! IMPRIMIR RESULTADO EN PANTALLA
 const textoEncriptadoPantalla = (e)=>{
+
      return textoEncriptado.value = e;
 }
 
@@ -83,5 +86,14 @@ btnIdiomaingles.addEventListener('click',()=>{
      let html = document.querySelector('html');
      html.setAttribute('lang','en');
 });
+btnCopiar.addEventListener('click',()=>{
+     let texto = textoEncriptado;
+     texto.select();
+     texto.setSelectionRange(0,99999);
+     document.execCommand('copy');
+})
 
+darkMode.addEventListener('click',() => {
+     document.body.classList.toggle('darkMode');
+})
 

@@ -8,7 +8,8 @@
      <link rel="stylesheet" href="build/css/app.css">
 </head>
 <body>
-     <header class="container headerPagina">
+     <header class="contenedor">
+          <nav class="headerPagina">
           <a href="index.html">
                <img src="build/img/Logo.png">
           </a>
@@ -17,25 +18,38 @@
                <a id="español">Español</a>
                <img class="darkMode" id="darkMode" src="build/img/dark-mode.svg" alt="modo Oscuro">
           </div>
+     </nav>
           
           
      </header>
      
-     <main class="container">
-
-          <div>
-               <textarea name="textoUsuario" id="textoUsuario" placeholder="Ingresa Texto a Encriptar" cols="30" rows="10"></textarea>
-          </div>
-
-          <div>
-               <input type="button" id="btn-Encriptar" value="Encriptar">
+     <main class="contenedor">
+          <div class="text-ingresarUsuario">
+               <div class="encriptarTexto">
+                    <h2>Encriptar</h2>
+                    <textarea name="disTextArea textoUsuario" id="textoUsuario" placeholder="Ingresa Texto a Encriptar" cols="30" rows="10"></textarea>
+               </div>
+               <h3>Aca podras escribir el texto que quieras y sera encriptado.</h3>
                
-               <input type="button" id="btn-Desencriptar"value="Desencriptar">
-
+               <div class="btnGeneral">
+                              <input type="button" id="btn-Encriptar" value="Encriptar">
+                              
+                              <input type="button" id="btn-Desencriptar"value="Desencriptar">
+               
+               </div>
           </div>
 
-          <div>
-               <textarea name="textoEncriptado" readonly="readonly" id="textoEncriptado" cols="30" rows="10"></textarea>
+          <div class="text-ingresarUsuario">
+               <div>
+                    <textarea name="diseñoTextArea textoEncriptado" readonly="readonly" id="textoEncriptado" cols="30" rows="10"></textarea>
+               </div>
+
+               <div>
+                    <img class="muñeco" src="build/img/Muñeco.png" alt="logoAlura">
+     
+                    <input type="button" id="btnCopiar" value="copiar">
+
+               </div>
           </div>
 
      </main>

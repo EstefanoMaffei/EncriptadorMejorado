@@ -1,0 +1,21 @@
+@use 'variables' as v;
+
+.darkMode{
+     transition: 1s ease-in;
+     p, h1,h2,h3,h4,h5{
+          color: v.$white;
+     }
+
+     li img{
+          filter: invert(1);
+     }
+
+     .icono:hover{
+          background-color: v.$gris;
+          transition: 1 ease-in;
+          p{
+               filter: invert(1);
+
+          }
+     }
+}
